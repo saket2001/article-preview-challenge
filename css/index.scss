@@ -1,0 +1,194 @@
+//colors
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$DesaturatedDarkBlue: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+body {
+  background-color: $LightGrayishBlue;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 280px 450px;
+    grid-template-rows: 250px;
+    box-shadow:  -10px 10px 20px #d8d4d4,
+             10px -10px 20px #d1d0d0;
+    border-radius: 8px;
+    .leftgitem {
+       border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      > img {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        opacity: 0.9;
+      }
+    }
+    .rightgitem {
+      background-color: white;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      .header {
+        color: $VeryDarkGrayishBlue;
+        font-size: 19px;
+        font-weight: bold;
+        padding: 5% 10%;
+        padding-bottom: 1%;
+      }
+      .small-text {
+        padding: 1% 10%;
+        font-size: 13px;
+        color: $GrayishBlue;
+        font-weight: 500;
+      }
+      .info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5% 10%;
+        .name-container {
+          display: flex;
+          flex-direction: row;
+          > img {
+            border-radius: 50%;
+            padding: 2%;
+          }
+          .name {
+            color: $VeryDarkGrayishBlue;
+            width: 200px;
+            font-weight: bold;
+            > span {
+              color: $GrayishBlue;
+              font-size: 13px;
+            }
+          }
+        }
+        .share-icon {
+          background-color: $LightGrayishBlue;
+          width: auto;
+          height: 35px;
+          border-radius: 50%;
+          padding: 2%;
+          outline: none;
+          border: none;
+          > .icons {
+            width: 16px;
+            height: 16px;
+          }
+          .share-content {
+            display: none;
+            width: 210px;
+            height: 40px;
+            position: relative;
+            top: 328px;
+            right: 220px;
+            background-color: $VeryDarkGrayishBlue;
+            border-radius: 10px;
+            img {
+              background-color: transparent;
+              padding: 0 2%;
+              margin: 0 1%;
+            }
+            div {
+              display: inline-block;
+              color: $LightGrayishBlue;
+              padding: 2% 3%;
+              margin: 5% 1%;
+            }
+          }
+          &:hover .share-content {
+            display: block;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:600px){
+    .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  .grid-container {
+    grid-template-columns: 300px;
+    grid-template-rows: 250px auto;
+    margin: 0 auto;
+    .leftgitem {
+       border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+      > img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+        opacity: 0.9;
+        width: 300px;
+      }
+    }
+    .rightgitem {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      .header {
+        font-size: 17px;
+        padding: 7% 10%;
+        padding-bottom: 2%;
+      }
+      .small-text {
+        font-size: 13px;
+      }
+      .info-container {
+        .name-container {
+          .name {
+            width: 180px;
+            font-size: 16px;
+          }
+        }
+        .share-icon {
+          width: auto;
+          height: 35px;
+          border-radius: 50%;
+          padding: 2%;
+          background-color: $LightGrayishBlue;
+          > .icons {
+            width: 16px;
+            height: 16px;
+          }
+          .share-content {
+            background-color: $VeryDarkGrayishBlue;
+            display: none;
+            width: 84%;
+            height: 60px;
+            position: relative;
+            top: 528px;
+            right: 30px;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            div {
+              font-size: 16px;
+            }
+          }
+          &:hover .share-content {
+            display: block;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+}

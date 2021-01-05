@@ -1,0 +1,239 @@
+body {
+  background-color: #ecf2f8;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 280px 450px;
+      grid-template-columns: 280px 450px;
+  -ms-grid-rows: 250px;
+      grid-template-rows: 250px;
+  -webkit-box-shadow: -10px 10px 20px #d8d4d4, 10px -10px 20px #d1d0d0;
+          box-shadow: -10px 10px 20px #d8d4d4, 10px -10px 20px #d1d0d0;
+  border-radius: 8px;
+}
+
+.container .grid-container .leftgitem {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.container .grid-container .leftgitem > img {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  opacity: 0.9;
+}
+
+.container .grid-container .rightgitem {
+  background-color: white;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.container .grid-container .rightgitem .header {
+  color: #48556a;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 5% 10%;
+  padding-bottom: 1%;
+}
+
+.container .grid-container .rightgitem .small-text {
+  padding: 1% 10%;
+  font-size: 13px;
+  color: #9eafc2;
+  font-weight: 500;
+}
+
+.container .grid-container .rightgitem .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5% 10%;
+}
+
+.container .grid-container .rightgitem .info-container .name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .grid-container .rightgitem .info-container .name-container > img {
+  border-radius: 50%;
+  padding: 2%;
+}
+
+.container .grid-container .rightgitem .info-container .name-container .name {
+  color: #48556a;
+  width: 200px;
+  font-weight: bold;
+}
+
+.container .grid-container .rightgitem .info-container .name-container .name > span {
+  color: #9eafc2;
+  font-size: 13px;
+}
+
+.container .grid-container .rightgitem .info-container .share-icon {
+  background-color: #ecf2f8;
+  width: auto;
+  height: 35px;
+  border-radius: 50%;
+  padding: 2%;
+  outline: none;
+  border: none;
+}
+
+.container .grid-container .rightgitem .info-container .share-icon > .icons {
+  width: 16px;
+  height: 16px;
+}
+
+.container .grid-container .rightgitem .info-container .share-icon .share-content {
+  display: none;
+  width: 210px;
+  height: 40px;
+  position: relative;
+  top: 328px;
+  right: 220px;
+  background-color: #48556a;
+  border-radius: 10px;
+}
+
+.container .grid-container .rightgitem .info-container .share-icon .share-content img {
+  background-color: transparent;
+  padding: 0 2%;
+  margin: 0 1%;
+}
+
+.container .grid-container .rightgitem .info-container .share-icon .share-content div {
+  display: inline-block;
+  color: #ecf2f8;
+  padding: 2% 3%;
+  margin: 5% 1%;
+}
+
+.container .grid-container .rightgitem .info-container .share-icon:hover .share-content {
+  display: block;
+  position: absolute;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .container .grid-container {
+    -ms-grid-columns: 300px;
+        grid-template-columns: 300px;
+    -ms-grid-rows: 250px auto;
+        grid-template-rows: 250px auto;
+    margin: 0 auto;
+  }
+  .container .grid-container .leftgitem {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+  .container .grid-container .leftgitem > img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    opacity: 0.9;
+    width: 300px;
+  }
+  .container .grid-container .rightgitem {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .container .grid-container .rightgitem .header {
+    font-size: 17px;
+    padding: 7% 10%;
+    padding-bottom: 2%;
+  }
+  .container .grid-container .rightgitem .small-text {
+    font-size: 13px;
+  }
+  .container .grid-container .rightgitem .info-container .name-container .name {
+    width: 180px;
+    font-size: 16px;
+  }
+  .container .grid-container .rightgitem .info-container .share-icon {
+    width: auto;
+    height: 35px;
+    border-radius: 50%;
+    padding: 2%;
+    background-color: #ecf2f8;
+  }
+  .container .grid-container .rightgitem .info-container .share-icon > .icons {
+    width: 16px;
+    height: 16px;
+  }
+  .container .grid-container .rightgitem .info-container .share-icon .share-content {
+    background-color: #48556a;
+    display: none;
+    width: 84%;
+    height: 60px;
+    position: relative;
+    top: 528px;
+    right: 30px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .container .grid-container .rightgitem .info-container .share-icon .share-content div {
+    font-size: 16px;
+  }
+  .container .grid-container .rightgitem .info-container .share-icon:hover .share-content {
+    display: block;
+    position: absolute;
+  }
+}
+/*# sourceMappingURL=index.css.map */
